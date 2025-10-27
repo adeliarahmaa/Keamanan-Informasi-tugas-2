@@ -1,4 +1,3 @@
-# device_server.py
 # Jalankan di Terminal A (bertindak sebagai server/listener)
 import socket
 import threading
@@ -6,11 +5,9 @@ import struct
 from crypto_utils import encrypt_message, decrypt_message
 import sys
 
-# ----- Ganti KEY ini jika mau (harus sama di client) -----
 KEY = bytes.fromhex("00112233445566778899aabbccddeeff00112233445566778899aabbccddeeff")
-# ----------------------------------------------------------
 
-HOST = "127.0.0.1"   # gunakan localhost untuk 1 laptop (2 terminal)
+HOST = "127.0.0.1"   #gunakan localhost untuk 1 laptop (2 terminal)
 PORT = 9000
 
 def recv_exact(sock, n):
@@ -70,3 +67,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
